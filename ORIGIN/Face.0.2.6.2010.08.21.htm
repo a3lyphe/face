@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Face.0.2.6.2010.08.21</title>
+		<meta
+			http-equiv="content-Type"
+			content="text/html; charset=utf-8"
+		/>
+		<script type="text/javascript">
+			//Face.0.2.6.2010.08.21
+			alert((
+				'°Face.0.2.6.2010.08.21°:'
+				+'\n++\t'
+				+'\n++\t'
+				+'\n++\t'
+			));
+			//Class|Collection|Container|Catcher|Cage
+			var C={};
+		</script>
+		<meta
+			http-equiv="Content-Script-Type"
+			content="text/javascript"
+		/>
+		<meta
+			http-equiv="Content-Style-Type"
+			content="text/css"
+		/>
+		<meta
+			http-equiv="content-language"
+			content="de"
+		/>
+		<meta
+			http-equiv="set-cookie"
+			content="
+				cookieName=cookiewert;
+				expires=Sun, 01 Jan 2006 00:00:00 GMT;
+				path=/;
+				"
+		/>
+		<meta
+			http-equiv="cache-control"
+			content="no-cache" />
+		<meta
+			http-equiv="pragma"
+			content="no-cache"
+		/>
+		<meta
+			name="generator"
+			content="A3lyphe"
+		/>
+		<style>
+			body
+			{
+				background-color:#632A40;
+				padding:0;
+				margin:0;
+			}
+			*
+			{
+				padding:0;
+				margin:0;
+				border:none;
+			}
+			img
+			{
+				width:64px;
+				height:96px;
+			}
+			li
+			{
+				/*position:absolute;*/
+				padding:0;
+				margin:0;
+				float:left;
+				clear:right;
+				margin:24px;
+			}
+			/*Face*/
+			.Face
+			{
+				width:128px;
+				height:224px;
+			}
+			.Face *
+			{
+				position:absolute;
+			}
+			.Face .Head
+			{
+				
+			}
+			.Face .Hair
+			{
+				
+			}
+			.Face .Eye
+			{
+				
+			}
+			.Face .Brow
+			{
+				
+			}
+			.Face .Nose
+			{
+				
+			}
+			.Face .Lip
+			{
+				
+			}
+			.Face .Beard
+			{
+				display:none;
+			}
+			.Face .Hat
+			{
+				display:none;
+			}
+			.Face .Accessoire
+			{
+				display:none;
+			}
+		</style>
+		<script>
+			C.Face={};
+			C.Face.Cast
+			=
+			function
+			(
+			
+			)
+			{
+				//var my=this;
+				this.Name='Face';
+				this.id;
+				this.visibility;
+				this.x;
+				this.Head;
+				this.Hair;
+				this.Eye;
+				this.Brow;
+				this.Nose;
+				this.Lip;
+				this.Beard;
+				this.Hat;
+				this.Accessoire;
+				this.HtML='';
+				this.Fold='Icon';
+			}
+			C.Face.Vast={};//alles,ausgedehnt,ausgeweitet,unermesslich,ueberwaeltigend
+			C.Face.Past={};//Logbuch?
+			C.Face.Mast={};//Mast=Zucht; Mast=denglisch für ein Muss/Kann Sein oder ein slangmaessiges most im Sinne von MostOf? Bspw. für Instanziierung,Constructor stellvertretend, Produktion halt, naeh?!
+			C.Face.Last={};//Letzte Produktion
+			C.Face.Rast=[];//WarteSchlaeng
+			C.Face.Tast={};
+			C.Face.Gast={};//
+			C.Face.Method={};
+			C.Face.Method.make
+			=
+			function
+			(
+				Hold
+			)
+			{
+				for
+				(
+					var i=0;
+					i<Hold.length;
+					i++
+				)
+				{
+					var that=new InstanceOf(my.Name);
+					that.Rank=i;
+					Hold[i]=that;
+				}
+			}
+			C.Face.Cast.prototype.make
+			=
+				C.Face.Method.make
+			;
+		</script>
+		<script>
+			C.Procedure={};
+			C.Procedure.createInstancesFrom
+			=
+			function
+			(
+				Class
+				,
+				Amount
+			)
+			{
+				for
+				(
+					i=0;
+					i<Amount.length;
+					i++
+				)
+				{
+					var
+					that
+					=
+						new C.InstanceOf.Class(Class)
+					;
+					that.Rank
+					=
+						i
+					;
+					Amount[i]
+					=
+						that
+					;
+				}
+			}
+			C.Procedure.createInstancesFromArrayOfNames
+			=function
+			(
+				O
+			)
+			{
+				for
+				(
+					o
+					in
+					O
+				)
+				{
+					C.Procedure.createInstancesFrom
+					(
+						O[o]
+						,
+						them[O[o]]
+					);
+				}
+			}
+			C.Procedure.Whos
+			=
+			function
+			(that)
+			{
+				alert((
+					'id: '
+					+that.id
+					+';'
+				));
+			}
+		</script>
+		<script>
+			C.Face.Arrays={};
+			C.Face.Arrays.Icon={};
+			C.Face.Arrays.Icon.Hold='Icon';
+			var
+			them
+			=
+			{
+				Head:
+					new Array(5)
+				,
+				Hair:
+					new Array(19)
+				,
+				Eye:
+					new Array(9)
+				,
+				Brow:
+					new Array(7)
+				,
+				Nose:
+					new Array(6)
+				,
+				Lip:
+					new Array(9)
+				,
+				Beard:
+					new Array(20)
+				,
+				Hat:
+					new Array(8)
+				,
+				Accessoire:
+					new Array(6)
+				,
+				much:
+					new Array(99)
+			}
+			C.InstanceOf={};
+			C.InstanceOf.Class
+			=
+			function
+			(Class)
+			{
+				this.Name=Class;
+				this.Hold=C.Face.Arrays.Icon.Hold;
+				this.Fold=Class;
+				this.Name=Class;
+				this.Type='png';
+				this.Rank;
+			}
+			C.InstanceOf.Method={};
+			C.InstanceOf.Method.path
+			=
+			function()
+			{
+				return(''
+							+this.Hold
+							+'/'
+							+this.Fold
+							+'/'
+							+this.Name
+							+' '
+							+'('
+							+(this.Rank+1).toString()
+							+')'
+							+'.'
+							+this.Type
+				);
+			}
+			C.InstanceOf.Class.prototype.path
+			=
+				C.InstanceOf.Method.path
+			;
+			var
+			TilesAsAnArrayOfNamesForSection
+			=
+			[
+				'Head'
+				,'Hair'
+				,'Eye'
+				,'Brow'
+				,'Nose'
+				,'Lip'
+				,'Beard'
+				,'Hat'
+				,'Accessoire'
+			];
+			C.Procedure.createInstancesFromArrayOfNames(TilesAsAnArrayOfNamesForSection);
+			Faces=[];
+		</script>
+	</head>
+	<body>
+		<ol id="Face"></ol>
+		<script>
+			var E={};
+			E
+			.ol
+			=
+				document.getElementById
+				(
+					'Face'
+				)
+			;
+			var myBufferForTheNextLoop={};
+			for
+			(
+				var i=0
+				;
+				i<them.much.length
+				;
+				i++
+			)
+			{
+				eval((
+					'iFace'
+					+i
+					+'='
+					+'new'
+					+' C'
+					+'.'
+					+'Face'
+					+'.'
+					+'Cast'
+					+'()'
+					+';'
+				));
+				myBufferForTheNextLoop
+				=
+					new C.Face.Cast()
+				;
+				eval((
+					'var'
+					+' iFace'
+					+'='
+					+'iFace'
+					+i
+					+';'
+				));
+				E.li
+				=
+				document.createElement
+				(
+					'li'
+				);
+				E.li.setAttribute
+				(
+					'id'
+					,
+					(
+						'Face'
+						+
+						i
+					)
+				)
+				;
+				E.li.setAttribute
+				(
+					'class'
+					,
+					'Face'
+				)
+				;
+				E.li.setAttribute
+				(
+					'onmouseup'
+					,
+					'C.Procedure.Whos(this)'
+				);
+				for
+				(
+					actualTileName
+					in
+					TilesAsAnArrayOfNamesForSection
+				)
+				{
+					var Part=TilesAsAnArrayOfNamesForSection[actualTileName];
+					C
+					.Face
+					.Instances
+					=
+						{}
+					;
+					C
+					.Face
+					.Instances
+					.All
+					=
+						[
+						
+						]
+					;
+					C.Face.Instances.One={};
+					iFace[Part]=them[Part][parseInt(Math.random()*them[Part].length)];
+					E.img
+					=
+						document
+						.createElement
+						(
+							'img'
+						)
+					;
+					E
+					.img
+					.src
+					=
+						iFace
+						[
+							Part
+						]
+						.path
+						(
+						
+						)
+					;
+					E
+					.img
+					.setAttribute
+					(
+						'class'
+						,
+						Part
+					)
+					;
+					E
+					.li
+					.appendChild
+					(
+						E
+						.img
+					)
+					;
+				}
+				E
+				.ol
+				.appendChild
+				(
+					E
+					.li
+				)
+				;
+				Faces
+				.push
+				(
+					iFace
+				)
+				;
+			}
+		</script>
+	</body>
+</html>

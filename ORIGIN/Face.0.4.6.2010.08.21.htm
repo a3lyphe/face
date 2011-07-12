@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Face.0.4.6.2010.08.21</title>
+		<meta
+			http-equiv="content-Type"
+			content="text/html; charset=utf-8"
+		/>
+		<script type="text/javascript">
+			alert((
+				document.title
+				+'\n\t'+''
+				+'\n\t'+''
+				+'\n\t'+''
+			))
+			var A={};
+		</script>
+		<meta
+			http-equiv="Content-Script-Type"
+			content="text/javascript"
+		/>
+		<meta
+			http-equiv="Content-Style-Type"
+			content="text/css"
+		/>
+		<meta
+			http-equiv="content-language"
+			content="de"
+		/>
+		<meta
+			http-equiv="set-cookie"
+			content="
+				cookieName=cookiewert;
+				expires=Sun, 01 Jan 2006 00:00:00 GMT;
+				path=/;
+				"
+		/>
+		<meta
+			http-equiv="cache-control"
+			content="no-cache" />
+		<meta
+			http-equiv="pragma"
+			content="no-cache"
+		/>
+		<meta
+			name="generator"
+			content="A3lyphe"
+		/>
+		<style>
+			body
+			{
+				background-color:#632A40;
+				padding:0;
+				margin:0;
+			}
+			*
+			{
+				padding:0;
+				margin:0;
+				border:none;
+			}
+			img
+			{
+				width:32px;
+				height:32px;
+			}
+			li
+			{
+				/*position:absolute;*/
+				padding:0;
+				margin:0;
+				float:left;
+				clear:right;
+				margin:24px;
+			}
+			/*Face*/
+			.Face
+			{
+				width:16px;
+				height:16px;
+			}
+			.Face *
+			{
+				position:absolute;
+			}
+		</style>
+		<script>
+			A.Face=document.createDocumentFragment()
+
+			A.Face.case
+			=
+			function
+			()
+			{
+				//var my=this;
+				with(this)
+				{
+				
+				Name='Face';
+				id='';
+				visibility='hidden';
+				x=0;
+				var
+				Head,
+				Hair,
+				Eye,
+				Brow,
+				Nose,
+				Lip,
+				Beard,
+				Hat,
+				Accessoire;
+				HtML='';
+				Fold='Icon';
+				
+				}
+				return this
+			}
+
+			A.Face.Icon={};
+			A.Face.Icon.Hold='Icon';
+
+			A.Face.Tile
+			=
+			{
+				Head:Array(5)
+				,
+				Hair:Array(19)
+				,
+				Eye:Array(9)
+				,
+				Brow:Array(7)
+				,
+				Nose:Array(6)
+				,
+				Lip:Array(9)
+				,
+				Beard:Array(20)
+				,
+				Hat:Array(8)
+				,
+				Accessoire:Array(6)
+				,
+				Case
+				:
+				[
+					'Head'
+					,'Hair'
+					,'Eye'
+					,'Brow'
+					,'Nose'
+					,'Lip'
+					,'Beard'
+					,'Hat'
+					,'Accessoire'
+				]
+			}
+			
+			A.InstanceOf={};
+			A.InstanceOf.Class
+			=
+			function
+			(Class)
+			{
+				this.Name=Class;
+				this.Hold=A.Face.Icon.Hold;
+				this.Fold=Class;
+				this.Name=Class;
+				this.Type='png';
+				this.Rank;
+			}
+
+			A.InstanceOf.Class.prototype.path
+			=
+			function()
+			{
+				return(''
+							+this.Hold
+							+'/'
+							+this.Fold
+							+'/'
+							+this.Name
+							+' '
+							+'('
+							+(this.Rank+1).toString()
+							+')'
+							+'.'
+							+this.Type
+				);
+			}
+
+			
+
+			A.Face.Tile.Case.forEach
+			(
+				function(v)
+				{
+					for
+					(
+						i=0;
+						i<A.Face.Tile[v].length;
+						i++
+					)
+					{
+						var
+						that
+						=
+						new A.InstanceOf.Class(v)
+
+						that.Rank
+						=
+						i
+
+						A.Face.Tile[v][i]
+						=
+						that
+					}
+				}
+			)
+
+			A.Face.Cast=Array(3)
+			
+			A.Face.cast=function(v)
+			{
+				
+				var vCast=[];
+				
+				if
+				(!A.Face.Cast)
+				{
+					
+					v?A.Face.Cast=Array(v):A.Face.Cast=[1]
+				}
+				else
+				{
+					v?A.Face.Cast=Array(v):A.Face.Cast=[1]
+				}
+
+				A.Face.Lode
+				=
+				document.createDocumentFragment()
+
+				A.OL=document.createElement('ol')
+				A.OL.Cast=[]
+				A.OL.CAST=A.OL.Cast.length
+
+				//A.OL.Cast[A.OL.CAST]=document.createDocumentFragment()
+
+				A.OL.Cast[A.OL.CAST]=A.OL.cloneNode(false)
+
+				A.OL.LI=document.createElement('li')
+
+				A.OL.LI.Cast=Array(A.Face.Cast.length)
+
+				//
+				for(var i=0;i<A.OL.LI.Cast.length;i++)
+				{
+					A.OL.LI.Cast[i]=A.OL.LI.cloneNode(false)
+				}
+				//
+				for
+				(
+					var i
+					in A.OL.LI.Cast
+				)
+				{
+					A.Face.Cast[i]=A.Face.case()
+
+					A.OL.LI.Cast[i].id='Face'+(i+1)
+
+					A.OL.LI.Cast[i].className='Face'
+
+					A.OL.LI.Cast[i].onmouseup=function(){}
+
+					A.Face.Tile.Case.forEach
+					(
+						function(Part)
+						{
+
+							A.Face.Cast[i][Part]
+							=
+							A.Face.Tile[Part][parseInt(Math.random()*A.Face.Tile[Part].length)]
+
+							A.OL.LI.Cast[i].img
+							=
+							document.createElement('img')
+
+							A.OL.LI.Cast[i].img.src
+							=
+							A.Face.Cast[i][Part].path()//verweis auf vorgeladenes bild
+
+							A.OL.LI.Cast[i].img.className=Part
+
+							A.OL.LI.Cast[i].appendChild(A.OL.LI.Cast[i].img)
+						}
+					)
+
+					A.OL.Cast[A.OL.CAST].appendChild(A.OL.LI.Cast[i])
+				}
+				A.Face.Lode.appendChild(A.OL.Cast[A.OL.CAST])
+
+				return A.Face.Lode
+			}
+
+			
+		</script>
+	</head>
+	<body>
+		<script>
+			
+			alert('Ready?')
+			document.body.appendChild(A.Face.cast(99))
+			alert('We did it!')
+		</script>
+	</body>
+</html>
