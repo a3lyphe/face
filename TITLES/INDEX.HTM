@@ -1,13 +1,30 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <HTML>
 	<HEAD>
-		<TITLE>A3lyphe.Face.0.0.0.2010.07.19</TITLE><!--Face.0.0.0.2009.07.31-->
+		<TITLE>Face.0.4.7.2011.07.06.21.08</TITLE>
 		<META charset=utf-8>
-		<SCRIPT>var A=A?A:A={};</SCRIPT>
+		<SCRIPT>
+			var A=
+			{
+				"TAGS":
+				{
+					"LIST":
+					{
+						"HOLD":"UL"
+						,
+						"ITEM":"LI"
+					}
+				}
+			}
+			var IN=
+			{
+				"IMAGES":"../IMAGES"
+			}
+		</SCRIPT>
 		<STYLE>
 			BODY
 			{
-				background-color:#632A40;
+				background-color:Black;
 				padding:0;
 				margin:0;
 			}
@@ -19,8 +36,8 @@
 			}
 			IMG
 			{
-				width:64px;
-				height:96px;
+				width:32px;
+				height:32px;
 			}
 			LI
 			{
@@ -34,381 +51,235 @@
 			/*Face*/
 			.Face
 			{
-				width:128px;
-				height:224px;
+				width:16px;
+				height:16px;
 			}
 			.Face *
 			{
 				position:absolute;
 			}
-			.Face .Head
-			{
-				
-			}
-			.Face .Hair
-			{
-				
-			}
-			.Face .Eye
-			{
-				
-			}
-			.Face .Brow
-			{
-				
-			}
-			.Face .Nose
-			{
-				
-			}
-			.Face .Lip
-			{
-				
-			}
-			.Face .Beard
-			{
-				display:none;
-			}
-			.Face .Hat
-			{
-				display:none;
-			}
-			.Face .Accessoire
-			{
-				display:none;
-			}
 		</STYLE>
-		<SCRIPT>//.Tiny
-			$=function(id)
-			{
-				return(
-					document.getElementById(id)
-				);
-			}
-			cE=function(tag)
-			{
-				return(
-					document.createElement(tag)
-				);
-			}
-			cO=function(tag)
-			{
-				var o=document.createElement(tag);
-				/*
-				for(a in attributes)
-				{
-					o.setAttribute(
-				}
-				*/
-			}
-		</SCRIPT>
-		<SCRIPT>//Classes
-			var Face=function(){
-				var mine=this;
-				this.Name='Face';
-				this.id;
-				this.visibility;
-				this.x;
-				this.Head;
-				this.Hair;
-				this.Eye;
-				this.Brow;
-				this.Nose;
-				this.Lip;
-				this.Beard;
-				this.Hat;
-				this.Accessoire;
-				this.HtML='';
-				this.Fold='../IMAGES';
-				this.make=function(Hold){
-					for(i=0;i<Hold.length;i++){//instance-generation:Head
-						var that=new InstanceOf(mine.Name);//instance of a 'Head'
-						that.Rank=i;//set the Rank of the Head-Instance (needed for path generation
-						Hold[i]=that;
-					}
-				}
-			}
-		</SCRIPT>
-		<SCRIPT>//functions
-			function CreateInstance(Class,Amount){
-				for(i=0;i<Amount.length;i++){//instance-generation:Head
-					var that=new InstanceOf(Class);//instance of a 'Head'
-					that.Rank=i;//set the Rank of the Head-Instance (needed for path generation
-					Amount[i]=that;
-				}
-			}
-			function CreateFace(Parts)
-			{
-				for(each in Parts)
-				{
-					CreateInstance(Parts[each],them[Parts[each]]);
-				}
-			}
-		</SCRIPT>
-		<SCRIPT>//Global Variables
-			Icon=new Object();
-			Icon.Hold='../IMAGES';//the mainly used images Folder directly under root directory
-
-			//Arrays for images to build pirates
-			var them=
-			{
-				meineFunktion:function()
-				{
-					this.real='is real';
-					this.makeSome=function()
-					{
-						/*alert('Something was done');*/
-					}
-				},
-				Head:new Array(5),
-				Hair:new Array(19),
-				Eye:new Array(9),
-				Brow:new Array(7),
-				Nose:new Array(6),
-				Lip:new Array(9),
-				Beard:new Array(20),
-				Hat:new Array(8),
-				Accessoire:new Array(6),
-
-				much:new Array(9)//How many Faces?
-			}
-			mine=new them.meineFunktion();
-			alert(mine.real);
-			mine.makeSome();
-			//class:instanceOf
-			InstanceOf=function(Class)
-			{
-				this.Name=Class;
-				this.Hold=Icon.Hold;//the parent Folder
-				this.Fold=Class;//the Folder the generated Instance is stored at (e.g.:'Head')
-				this.Name=Class;//the Name under which the generated Instance is filed (e.g.:'Head.1','Head01','CrumpyHead')
-				this.Type='png';//the Type of image the generated Instance is stored in (e.g.:png,jpg,gif,svg)
-				this.Rank;//position in list/hierarchy/array
-				this.path=function()
-				{
-					return(''
-								+this.Hold
-								+'/'
-								+this.Fold
-								+'/'
-								+this.Name
-								+' '
-								+'('
-								+(this.Rank+1).toString()
-								+')'
-								+'.'
-								+this.Type
-					);
-				}
-			}
-			var FaceTiles=['Head','Hair','Eye','Brow','Nose','Lip','Beard','Hat','Accessoire'];
-			CreateFace(FaceTiles);
-			var HtML='';//HtML-Buffer for general-Use
-			Faces=new Array();//
-		</SCRIPT>
-		<SCRIPT>//Instance-Creation
-			for(var i=0;i<them.much.length;i++)
-			{
-				//Instance-Creation
-				eval(''
-					+'iFace'
-					+i
-					+'='
-					+'new '
-					+'Face'
-					+'()'
-					+';'
-				);
-				eval(''
-					+'var '
-					+'iFace'
-					+'='
-					+'iFace'
-					+i
-					+';'
-				);
-				iFace.id='iFace'+i;
-				iFace.Name='Face';
-				iFace.className='Face';
-				iFace.visibility;
-				iFace.x=0;
-				iFace.y=0;
-
-				
-
-				iFace.HtML=''
-					+'<LI'
-					+' id="'
-						+'Face'
-						+i
-					+'"'
-					+' class="'
-						+'Face'
-					+'"'
-					+' onmouseup="'
-						+'Whos(this)'
-					+'"'
-					+'>';
-				
-				//set random part.Rank
-				
-				iFace.Head=them.Head[parseInt(Math.random()*them.Head.length)];
-				
-				iFace.HtML+=''
-					+'<IMG'
-					+' src="'
-						+iFace.Head.path()
-						+'"'
-					+' class="'
-						+'Head'
-						+'"'
-					+'>'
-				+'';
-				iFace.Hair=them.Hair[parseInt(Math.random()*them.Hair.length)];
-				iFace.HtML+=''
-					+'<IMG'
-					+' src="'
-						+iFace.Hair.path()
-						+'"'
-					+' class="'
-						+'Hair'
-						+'"'
-					+'>'
-				iFace.Eye=them.Eye[parseInt(Math.random()*them.Eye.length)];
-				iFace.HtML+=''
-					+'<IMG'
-					+' src="'
-						+iFace.Eye.path()
-						+'"'
-					+' class="'
-						+'Eye'
-						+'"'
-					+'>'
-				iFace.Brow=them.Brow[parseInt(Math.random()*them.Brow.length)];
-				iFace.HtML+=''
-					+'<IMG'
-					+' src="'
-						+iFace.Brow.path()
-						+'"'
-					+' class="'
-						+'Brow'
-						+'"'
-					+'>'
-				iFace.Nose=them.Nose[parseInt(Math.random()*them.Nose.length)];
-				iFace.HtML+=''
-					+'<IMG'
-					+' src="'
-						+iFace.Nose.path()
-						+'"'
-					+' class="'
-						+'Nose'
-						+'"'
-					+'>'
-				iFace.Lip=them.Lip[parseInt(Math.random()*them.Lip.length)];
-				iFace.HtML+=''
-					+'<IMG'
-					+' src="'
-						+iFace.Lip.path()
-						+'"'
-					+' class="'
-						+'Lip'
-						+'"'
-					+'>'
-				iFace.Beard=them.Beard[parseInt(Math.random()*them.Beard.length)];
-				iFace.HtML+=''
-					+'<IMG'
-					+' src="'
-						+iFace.Beard.path()
-						+'"'
-					+' class="'
-						+'Beard'
-						+'"'
-					+'>'
-				iFace.Hat=them.Hat[parseInt(Math.random()*them.Hat.length)];
-				iFace.HtML+=''
-					+'<IMG'
-					+' src="'
-						+iFace.Hat.path()
-						+'"'
-					+' class="'
-						+'Hat'
-						+'"'
-					+'>'
-				iFace.Accessoire=them.Accessoire[parseInt(Math.random()*them.Accessoire.length)];
-				iFace.HtML+=''
-					+'<IMG'
-					+' src="'
-						+iFace.Accessoire.path()
-						+'"'
-					+' class="'
-						+'Accessoire'
-						+'"'
-					+'>'
-				//create <IMG>'s based on list of parts of face
-				
-				iFace.HtML+='</LI>';
-				Faces[Faces.length]=iFace;//transfer generated Face-instance into Faces-Array (all faces)
-			}
-
-			function Whos(that)
-			{
-				/*
-				alert(''
-					+'id: '
-						+that.id
-					+';'
-				);
-				*/
-			}
-
-			function Resize()
-			{
-				/*
-				alert(window.innerWidth);
-				*/
-			}
-
-			init=function()
-			{//
-				HtML='';//Clearing HtML-Buffer-Variable
-				for(each in Faces){//für jedes Face im array Faces
-						HtML+=Faces[each].HtML;
-					}
-				$('Face').innerHTML=HtML;//Transfer Faces-html into Container
-			}
-		</SCRIPT>
-		<SCRIPT>//Event-Handler
-			//onresize=Resize;
-		</SCRIPT>
-	<BODY onload=init()>
-		<OL id=Face></OL>
-		<OL id=Test></OL>
 		<SCRIPT>
-			var o_=function()
-			{
-				var OL=document.getElementById('Test');
-				var LI=document.createElement('LI');
-				LI.setAttribute('class','Face');
+			A.Face=document.createDocumentFragment()
 
-				for(tile in FaceTiles)
+			A.Face.case
+			=
+			function
+			()
+			{
+				//var my=this;
+				with(this)
 				{
-					var IMG=document.createElement('IMG');
-					IMG.src=iFace[FaceTiles[tile]].path();
-					IMG.setAttribute('class',FaceTiles[tile]);
-					LI.appendChild(IMG);
+				
+				Name='Face';
+				id='';
+				visibility='hidden';
+				x=0;
+				var
+				Head,
+				Hair,
+				Eye,
+				Brow,
+				Nose,
+				Lip,
+				Beard,
+				Hat,
+				Accessoire;
+				HtML='';
+				Fold='Icon';
+				
 				}
-				OL.appendChild(LI);
+				return this
+			}
+
+			A.Face.Icon={};
+			A.Face.Icon.Hold=IN.IMAGES;
+
+			A.Face.Tile
+			=
+			{
+				Head:Array(5)
+				,
+				Hair:Array(19)
+				,
+				Eye:Array(9)
+				,
+				Brow:Array(7)
+				,
+				Nose:Array(6)
+				,
+				Lip:Array(9)
+				,
+				Beard:Array(20)
+				,
+				Hat:Array(8)
+				,
+				Accessoire:Array(6)
+				,
+				Case
+				:
+				[
+					'Head'
+					,'Hair'
+					,'Eye'
+					,'Brow'
+					,'Nose'
+					,'Lip'
+					,'Beard'
+					,'Hat'
+					,'Accessoire'
+				]
 			}
 			
-				o_();
-				o_();
-				o_();
-		</SCRIPT>
-		<SCRIPT>
-			var TestClass=function(Generator)
+			A.InstanceOf={};
+			A.InstanceOf.Class
+			=
+			function
+			(Class)
 			{
-				this.className=TestClass;
-				this.id=TestId;
-				this.node=new Node();
+				this.Name=Class;
+				this.Hold=A.Face.Icon.Hold;
+				this.Fold=Class;
+				this.Name=Class;
+				this.Type='png';
+				this.Rank;
 			}
+
+			A.InstanceOf.Class.prototype.path
+			=
+			function()
+			{
+				return(''
+							+this.Hold
+							+'/'
+							+this.Fold
+							+'/'
+							+this.Name
+							+' '
+							+'('
+							+(this.Rank+1).toString()
+							+')'
+							+'.'
+							+this.Type
+				);
+			}
+
+			
+
+			A.Face.Tile.Case.forEach
+			(
+				function(v)
+				{
+					for
+					(
+						i=0;
+						i<A.Face.Tile[v].length;
+						i++
+					)
+					{
+						var
+						that
+						=
+						new A.InstanceOf.Class(v)
+
+						that.Rank
+						=
+						i
+
+						A.Face.Tile[v][i]
+						=
+						that
+					}
+				}
+			)
+
+			A.Face.Cast=Array(3)
+
+			A.Face.cast=function(v)
+			{
+
+				var vCast=[];
+
+				if
+				(!A.Face.Cast)
+				{
+					
+					v?A.Face.Cast=Array(v):A.Face.Cast=[1]
+				}
+				else
+				{
+					v?A.Face.Cast=Array(v):A.Face.Cast=[1]
+				}
+
+				A.Face.Lode
+				=
+				document.createDocumentFragment()
+
+				A.OL=document.createElement(A.TAGS.LIST.HOLD)
+				A.OL.Cast=[]
+				A.OL.CAST=A.OL.Cast.length
+
+				//A.OL.Cast[A.OL.CAST]=document.createDocumentFragment()
+
+				A.OL.Cast[A.OL.CAST]=A.OL.cloneNode(false)
+
+				A.OL.LI=document.createElement(A.TAGS.LIST.ITEM)
+
+				A.OL.LI.Cast=Array(A.Face.Cast.length)
+
+				//
+				for(var i=0;i<A.OL.LI.Cast.length;i++)
+				{
+					A.OL.LI.Cast[i]=A.OL.LI.cloneNode(false)
+				}
+				//
+				for
+				(
+					var i
+					in A.OL.LI.Cast
+				)
+				{
+					A.Face.Cast[i]=A.Face.case()
+
+					A.OL.LI.Cast[i].id='Face'+(i+1)
+
+					A.OL.LI.Cast[i].className='Face'
+
+					A.OL.LI.Cast[i].onmouseup=function(){}
+
+					A.Face.Tile.Case.forEach
+					(
+						function(Part)
+						{
+
+							A.Face.Cast[i][Part]
+							=
+							A.Face.Tile[Part][parseInt(Math.random()*A.Face.Tile[Part].length)]
+
+							A.OL.LI.Cast[i].IMG
+							=
+							document.createElement('IMG')
+
+							A.OL.LI.Cast[i].IMG.src
+							=
+							A.Face.Cast[i][Part].path()//verweis auf vorgeladenes bild
+
+							A.OL.LI.Cast[i].IMG.className=Part
+
+							A.OL.LI.Cast[i].appendChild(A.OL.LI.Cast[i].IMG)
+						}
+					)
+
+					A.OL.Cast[A.OL.CAST].appendChild(A.OL.LI.Cast[i])
+				}
+				A.Face.Lode.appendChild(A.OL.Cast[A.OL.CAST])
+
+				return A.Face.Lode
+			}
+		</SCRIPT>
+	<BODY>
+		<SCRIPT>
+			//alert('Ready?')
+			document.body.appendChild(A.Face.cast(99))
+			//alert('We did it!')
 		</SCRIPT>
